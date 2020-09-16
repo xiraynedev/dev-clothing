@@ -2,3 +2,8 @@ body {
    font-family: 'roboto', sans-serif;
    padding: 20px 60px;
 }
+
+a:link, a:visited, a:hover, a:active {
+   color: rgb(78, 49, 5);
+   text-decoration: none;
+}
