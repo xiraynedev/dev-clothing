@@ -18,14 +18,12 @@ export const SignIn = () => {
   }
 
   const handleEmailChange = event => {
-    event.preventDefault()
-
+    
     setEmail(event.target.value)
   }
 
   const handlePasswordChange = event => {
-    event.preventDefault()
-
+    
     setPassword(event.target.value)
   }
 

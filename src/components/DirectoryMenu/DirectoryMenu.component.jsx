@@ -4,7 +4,7 @@ import { MenuItemWithRouter } from '../MenuItem/MenuItem.component';
 
 export const DirectoryMenu = () => {
 
-  const [sections, setSections] = useState([{
+  const [sections] = useState([{
     title: 'HATS',
     imageUrl: 'https://images.unsplash.com/photo-1572307480813-ceb0e59d8325?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=900&q=60',
     id: 1,

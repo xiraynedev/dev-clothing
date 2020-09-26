@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Homepage } from './components/Homepage/Homepage.component'
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { ShopPage } from './components/ShopPage/ShopPage.component';
 import { Header } from './components/Header/Header.component'
 import { SignInAndSignUpPage } from './components/SignInAndSignUpPage/SignInAndSignUpPage.component';
@@ -17,16 +17,23 @@ function App() {
       if (userAuth) {
         const userRef = await createUserProfileDocument(userAuth)
 
-
-        
+        userRef.onSnapshot(snapshot => {
+          setCurrentUser({
+            id: snapshot.id,
+            ...snapshot.data()
+          })
+        })
+      } else {
+        setCurrentUser(userAuth)
       }
-      
 
       return () => {
         unsubscribeFromAuth()
       }
     })
   }, [])
+
+  console.log(currentUser)
   
   return (
     <>
