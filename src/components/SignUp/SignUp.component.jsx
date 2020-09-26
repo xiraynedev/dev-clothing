@@ -28,10 +28,12 @@ export const SignUp = () => {
       setEmail('')
       setPassword('')
       setConfirmPassword('')
-
+      
     } catch (error) {
       console.error(error)
     }
+
+    
   }
 
   const handleDisplayNameChange = event => {
