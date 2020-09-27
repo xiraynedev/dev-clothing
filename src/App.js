@@ -3,7 +3,7 @@ import './App.css';
 import { Homepage } from './components/Homepage/Homepage.component'
 import { Route, Switch } from 'react-router-dom'
 import { ShopPage } from './components/ShopPage/ShopPage.component';
-import { Header } from './components/Header/Header.component'
+import Header from './components/Header/Header.component'
 import { SignInAndSignUpPage } from './components/SignInAndSignUpPage/SignInAndSignUpPage.component';
 import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
@@ -35,7 +35,7 @@ function App() {
   
   return (
     <>
-    <Header currentUser={currentUser} />
+    <Header />
     <Switch>
       <Route exact path='/' component={Homepage} />
       <Route path='/shop' component={ShopPage} />
