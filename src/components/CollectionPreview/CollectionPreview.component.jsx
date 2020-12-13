@@ -1,6 +1,6 @@
 import React from 'react'
 import './CollectionPreview.styles.scss'
-import { CollectionItem } from '../CollectionItem/CollectionItem.component'
+import CollectionItem from '../CollectionItem/CollectionItem.component'
 
 export const CollectionPreview = ({ title, items }) => {
   return (
@@ -8,9 +8,9 @@ export const CollectionPreview = ({ title, items }) => {
       <h1 className='title'>{title.toUpperCase()}</h1>
       <div className='preview'>
         {
-          items.filter((item, index) => index < 4).map(({ id, ...itemProps }) => {
+          items.filter((item, index) => index < 4).map(item => {
             return (
-              <CollectionItem key={id} {...itemProps}></CollectionItem>
+              <CollectionItem key={item.id} item={item} />
             )
           })
         }
