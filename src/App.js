@@ -10,6 +10,7 @@ import {SignInAndSignUpPage} from './components/SignInAndSignUpPage/SignInAndSig
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
 import {selectCurrentUser} from "./redux/user/user.selectors";
 import {createStructuredSelector} from "reselect";
+// test
 
 function App({currentUser, setCurrentUser}) {
 
