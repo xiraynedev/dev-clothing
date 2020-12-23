@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './DirectoryMenu.styles.scss'
-import { MenuItemWithRouter } from '../MenuItem/MenuItem.component';
+import MenuItem from '../MenuItem/MenuItem.component';
 
 export const DirectoryMenu = () => {
 
@@ -37,7 +37,7 @@ export const DirectoryMenu = () => {
   return (
     <div className='directory-menu'>
       {sections.map(({ id, ...sectionProps }) => (
-        <MenuItemWithRouter key={id} {...sectionProps} />
+        <MenuItem key={id} {...sectionProps} />
       ))}
     </div>
   )
