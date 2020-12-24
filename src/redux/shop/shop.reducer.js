@@ -1,4 +1,4 @@
-import SHOP_DATA from './shopdata'
+import {SHOP_DATA} from './shopdata'
 
 const INITIAL_STATE = {
     collections: SHOP_DATA
