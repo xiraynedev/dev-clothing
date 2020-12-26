@@ -27,5 +27,29 @@
     margin-top: 30px;
     margin-left: auto;
     font-size: 36px;
+
+    & button {
+      margin-left: 100px;
+    }
   }
+
+  .test-warning {
+    margin-top: 40px;
+    font-size: 20px;
+    color: #ff0000;
+  }
+
+  .card-number {
+    color: blue;
+  }
+
+  .exp-date {
+    color: green;
+  }
+
+  .cvc {
+    color: darkred;
+  }
+
+
 }
