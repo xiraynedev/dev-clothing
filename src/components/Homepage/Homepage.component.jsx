@@ -1,11 +1,20 @@
 import React from 'react'
 import DirectoryMenu from '../DirectoryMenu/DirectoryMenu.component'
-import './Homepage.styles.scss'
+import styled from 'styled-components'
 
-export const Homepage = () => (
-  <div className='homepage'>
-    <DirectoryMenu />
-  </div>
+const HomepageContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
+export const Homepage = () => {
+    return (
+        <HomepageContainer className='homepage'>
+            <DirectoryMenu/>
+        </HomepageContainer>
+    )
+}
   
-)
+
 
