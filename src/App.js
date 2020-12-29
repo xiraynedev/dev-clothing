@@ -9,8 +9,8 @@ import ShopPage from './components/ShopPage/ShopPage.component';
 import Header from './components/Header/Header.component'
 import {SignInAndSignUpPage} from './components/SignInAndSignUpPage/SignInAndSignUpPage.component';
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
-import {selectCurrentUser} from "./redux/user/user.selectors";
 import {createStructuredSelector} from "reselect";
+import {selectCurrentUser} from "./redux/user/user.selectors";
 
 function App({currentUser, setCurrentUser}) {
 
@@ -28,6 +28,8 @@ function App({currentUser, setCurrentUser}) {
                         ...snapShot.data()
                     })
                 })
+
+
             } else {
                 setCurrentUser(userAuth)
             }
