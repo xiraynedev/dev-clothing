@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import './App.css';
 import {connect} from 'react-redux'
 import {setCurrentUser} from './redux/user/user.actions'
 import {Homepage} from './components/Homepage/Homepage.component'
@@ -11,6 +10,7 @@ import {SignInAndSignUpPage} from './components/SignInAndSignUpPage/SignInAndSig
 import {auth, createUserProfileDocument} from './firebase/firebase.utils'
 import {createStructuredSelector} from "reselect";
 import {selectCurrentUser} from "./redux/user/user.selectors";
+import { GlobalStyle } from "./global.styles";
 
 function App({currentUser, setCurrentUser}) {
 
@@ -42,6 +42,7 @@ function App({currentUser, setCurrentUser}) {
 
     return (
         <>
+            <GlobalStyle />
             <Header/>
             <Switch>
                 <Route exact path='/' component={Homepage}/>
